@@ -7,3 +7,7 @@
     cmake --build . -j4 && cmake --install .
 
 零补丁。Arrow 的 `ARROW_WITH_ZSTD` 用它（Parquet zstd 压缩实测生效，压到 23%）。
+
+## 更新（2026-11-04）
+
+已随 `doris_be` 链接验证通过，0 错误。Arrow Parquet 的 zstd codec 实测把 20000 行压到 108KB（23%），未静默降级。
